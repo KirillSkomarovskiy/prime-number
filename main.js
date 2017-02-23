@@ -55,12 +55,10 @@ function fourth(n) {
 }
 
 function fifth(n) {
-  var arr = [];
   var prime = [];
+  var arr = Array(n);
 
-  for (var i = 2; i < n; i++) {
-    arr[i] = true;
-  }
+  for (var i = 1; i < arr.length; arr[i++] = true);
 
   arr[1] = false;
 
@@ -85,5 +83,5 @@ function benchmark(func, n) {
   console.timeEnd('time');
 
 }
-console.log(benchmark(fifth, 500000));
-//console.log( fifth(1000).toString() );
+//console.log(benchmark(fifth, 500000));
+console.log( fifth(1000).toString() );
